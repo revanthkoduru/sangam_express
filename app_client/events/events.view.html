@@ -1,0 +1,40 @@
+<navigation></navigation>
+<div class="latest-events">
+	<div class="container">
+		<div class="section-header">
+			<h2 class="dark-text">{{vm.title}}</h2>
+			<div class="section-legend">{{vm.legend}}</div>
+		</div>
+		<div class="row filter">
+			<form class="form-horizontal">
+				<div class="form-group">
+					<label for="filter" class="col-xs-12 col-sm-2 control-label">Filter Results:</label>
+					<div class="col-xs-12 col-sm-10">
+						<input id="filter" name="filter" text="text" ng-model="textFilter"/>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="eventpage-latestevents">
+			<div class="inner">
+				<div class="item">
+					<div class="col-sm-4 col-md-4 events-box" ng-repeat="event in vm.events | filter: textFilter">
+						<div class="latestevents-box">
+							<div class="latestevents-img">
+								<a href="/#events/{{event._id}}" class="latestevents-img-a">
+									<img src="common/images/blank-latestposts.png"/>
+								</a>
+							</div>
+							<div class="latestevents-content">
+								<h3 class="latestevents-title"><a href="/#events/{{event._id}}">{{event.name}}</a></h3>
+								<p>{{event.category}}</p>
+								<p>{{event.description}}</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<feedback></feedback>

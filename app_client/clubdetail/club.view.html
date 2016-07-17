@@ -1,0 +1,111 @@
+<navigation></navigation>
+<div class="club-page">
+	<div class="section-header club-name">
+		<!-- SECTION TITLE -->
+		<h2 class="dark-text">{{vm.clubname}}</h2>		
+	</div>
+	<section class="about-us" id="aboutus">
+		<div class="container">
+			<!-- SECTION HEADER -->
+			<div class="section-header">
+				<!-- SECTION TITLE -->
+				<h2 class="white-text">About</h2>
+				<!-- SHORT DESCRIPTION ABOUT THE SECTION -->
+				<div class="white-text section-legend">Use this section to showcase important details about your business.</div>		
+			</div><!-- / END SECTION HEADER -->
+
+			<!-- 3 COLUMNS OF ABOUT US-->
+			<div class="row">
+			<!-- COLUMN 1 - BIG MESSAGE ABOUT THE COMPANY-->
+				<div class="col-lg-4 col-md-4 column zerif-rtl-big-title">
+					<div class="big-intro">{{vm.clubdata.about.head}}</div>
+				</div>
+				<div class="col-lg-4 col-md-4 column zerif_about_us_center text_and_skills">
+					<p>{{vm.clubdata.about.mid_text}}</p>
+				</div>	
+				<div class="col-lg-4 col-md-4 column zerif_about_us_center text_and_skills">
+					<p>{{vm.clubdata.about.conc}}</p>
+				</div>		
+			</div> <!-- / END 3 COLUMNS OF ABOUT US-->
+		</div> <!-- / END CONTAINER -->
+	</section>
+	<div class="clubpage-latestevents eventpage-latestevents">
+		<div class="container">
+			<div class="section-header">
+				<h2 class="daark-text">Latest Club Events</h2>
+			</div>
+			<div class="inner">
+				<div class="item">
+					<div class="col-sm-4 col-md-4 events-box" ng-repeat="event in vm.events | filter: vm.clubname">
+						<div class="latestevents-box">
+							<div class="latestevents-img">
+								<a href="/#events/{{event._id}}" class="latestevents-img-a">
+									<img src="../common/images/blank-latestposts.png"/>
+								</a>
+							</div>
+							<div class="latestevents-content">
+								<h3 class="latestevents-title"><a href="/#events/{{event._id}}">{{event.name}}</a></h3>
+								<p>{{event.category}}</p>
+								<p>{{event.description}}</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<section class="winners">
+		<div class="section-header">
+			<h2 class="white-text">
+				Winners
+			</h2>
+		</div>
+		<div class="container">
+			<div class="row eventwinners-box" ng-repeat="event in vm.events | filter: vm.clubname">
+				<div class="winner-row" ng-hide="event.winners == null">
+					<div class="event-name col-md-3"><h2>{{event.title}}</h2></div>
+					<div class="col-md-3 col-sm-4 team-box" ng-repeat="member in vm.clubdata.conv_details">
+						<div class="team-member">
+							<figure class="profile-pic">
+								<img src="../common/images/team2.png" />
+							</figure>
+							<div class="member-details">
+								<h3 class="white-text">{{member.name}}</h3>
+								<div class="position">{{member.position}}</div>
+							</div>
+							<div class="details">
+								<h4 class="winner-details">{{member.desc}}</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<div class="our-team">
+		<div class="container">
+			<div class="section-header">
+				<h2 class="dark-text">Contact Us</h2>
+				<div class="section-legend">Know who are part of the club</div>
+			</div>
+			<div class="row">
+				<div class="col-md-3 col-sm-4 team-box" ng-repeat="member in vm.clubdata.conv_details">
+					<div class="team-member">
+						<figure class="profile-pic">
+							<img src="../common/images/team2.png" />
+						</figure>
+						<div class="member-details">
+							<h3 class="dark-text">{{member.name}}</h3>
+							<div class="position">{{member.position}}</div>
+						</div>
+						<div class="details">
+							<h4>Contact-num:</h4><h4>{{member.contact_info.conc_num}}</h4>
+							<h4>Email-id:</h4><h4> {{member.contact_info.email}}</h4>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<feedback></feedback>

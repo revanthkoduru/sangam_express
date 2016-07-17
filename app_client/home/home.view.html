@@ -1,0 +1,82 @@
+<navigation></navigation>
+<div>
+	<div class="header-wrap">
+		<div class="header-content-wrap">
+			<div class="container">
+				<h1 class="intro-text">{{vm.title}}</h1>
+			</div>
+		</div>
+	</div>
+	<!--latest news-->
+	<div class="latest-news">
+		<div class="container">
+			<div class="section-header">
+				<h2 class="dark-text">{{vm.latestNews.section_title}}</h2>
+				<div class="section-legend">{{vm.latestNews.section_legend}}</div>
+			</div>
+			<div class="homepage-latestnews">
+				<div class="inner">
+					<div class="item">
+						<div class="col-sm-4 col-md-4 news-box" ng-repeat="news in vm.latestNews.news">
+							<div class="latestnews-box">
+								<div class="latestnews-img">
+									<a href="" class="latestnews-img-a">
+										<img src="../common/images/blank-latestposts.png"/>
+									</a>
+								</div>
+								<div class="latestnews-content">
+									<h3 class="latestnews-title"><a href="">{{news.title}}</a></h3>
+									<p>{{news.Category}}</p>
+									<p>{{news.description}}</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div> 	<!--end of latest news section-->
+	<!--about us section-->
+	<div class="about-us">
+		<div class="container">
+			<div class="section-header">
+				<h2 class="white-text">{{vm.aboutUs.section_title}}</h2>
+				<div class="white-text section-legend">{{vm.aboutUs.section_legend}}</div>
+			</div>
+			<div class="row aboutus-content" ng-repeat="content in vm.aboutUs.content">
+				<div class="col-lg-6 col-md-6 column big-title">
+					<div class="big-intro">{{content.title}}</div>
+				</div>
+				<div class="col-lg-6 col-md-6 column about_us_center">
+					<p>{{content.desc}}</p>
+				</div>
+			</div>
+		</div>
+	</div><!--end of about us section-->
+	<!--team section-->
+	<div class="our-team">
+		<div class="container">
+			<div class="section-header">
+				<h2 class="dark-text">{{vm.team.section_title}}</h2>
+				<div class="section-legend">{{vm.team.section_legend}}</div>
+			</div>
+			<div class="row">
+				<div class="col-md-3 col-sm-4 team-box" ng-repeat="member in vm.team.members">
+					<div class="team-member">
+						<figure class="profile-pic">
+							<img src="{{member.img}}" />
+						</figure>
+						<div class="member-details">
+							<h3 class="dark-text">{{member.name}}</h3>
+							<div class="position">{{member.position}}</div>
+						</div>
+						<div class="details">
+							{{member.desc}}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<feedback></feedback>

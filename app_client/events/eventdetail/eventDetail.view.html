@@ -1,0 +1,47 @@
+<navigation></navigation>
+<div class="event-detail">
+	<div class="container">
+		<div class="page">
+			<div class="row">
+				<div class=" col-xs-12 event-img">
+					<img src="../common/images/blank-latestposts.png"/>
+				</div>
+			</div>
+			<div class="event-name">
+				<h1>{{vm.eventdata.name}}</h1>
+			</div>
+			<div ng-switch on="vm.eventdata.finished" class="event-specs">
+				<div ng-switch-when="true">
+					<div class="panel panel-warning">
+						<div class="panel-heading">
+							<h1 class="panel-title">The event is completed on {{vm.eventdata.date}}</h1>
+						</div>
+						<div class="panel-body" ng-show="vm.eventdata.winners">
+							The winners are:
+						</div>
+					</div>
+				</div>
+				<div ng-switch-default>
+					<div class="event-venue">
+						<img src="../common/images/location.png"/>
+						<h4>VENUE: {{vm.eventdata.venue}}</h4>
+					</div>
+					<div class="event-date">
+						<h4>DATE: {{vm.eventdata.date | date: 'd-MM-yyyy'}}</h4>
+					</div>
+					<div class="event-time">
+						<h4>TIME: {{vm.eventdata.time}}</h4>
+					</div>
+				</div>
+			</div>
+			<div class="event-category">
+				<h4>CATEGORY: {{vm.eventdata.category}}</h4>
+			</div>
+			<hr />
+			<div class="event-description">
+				<h4>DESCRIPTION</h4>
+				<p>{{vm.eventdata.description}}</p>
+			</div>
+		</div>
+	</div>
+</div>

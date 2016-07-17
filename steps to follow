@@ -1,0 +1,112 @@
+$ npm install -g express-generator
+then clone the repo 
+and run $ npm install
+$ npm install -g nodemon
+and  then $ nodemon
+and go to your browser and go to localhost:3000
+also install angular ui calender in the folder by bower install --save angular-ui-calender
+
+then move the installed bower components into app_client
+
+fill the db "sangam-db"
+with 
+db.events.save({ "name": "Event-1",
+    "venue": "SAC",
+    "date": "2017-07-16T18:30:00.000Z",
+    "time": "4.00pm",
+    "status": false,
+    "category": "club-1",
+    "description": "kickstart event"})
+db.events.save({ "name": "Event-1",
+    "venue": "SAC",
+    "date": "2017-07-16T18:30:00.000Z",
+    "time": "4.00pm",
+    "status": false,
+    "category": "club-2",
+    "description": "kickstart event")}
+db.events.save({ "name": "Event-2",
+    "venue": "SAC",
+    "date": "2017-07-16T18:30:00.000Z",
+    "time": "4.00pm",
+    "status": false,
+    "category": "club-2",
+    "description": "kickstart event")}
+db.events.save({ "name": "Event-2",
+    "venue": "SAC",
+    "date": "2017-07-16T18:30:00.000Z",
+    "time": "4.00pm",
+    "status": false,
+    "category": "club-1",
+    "description": "kickstart event")}
+
+
+
+db.clubs.save({
+  "_id": "club-1",
+  "about": {
+    "head": "Everything you see here is responsive and mobile-friendly.",
+    "mid_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec massa enim. Aliquam viverra at est ullamcorper sollicitudin. Proin a leo sit amet nunc malesuada imperdiet pharetra ut eros.<br><br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec massa enim. Aliquam viverra at est ullamcorper sollicitudin. Proin a leo sit amet nunc malesuada imperdiet pharetra ut eros. <br><br>Mauris vel nunc at ipsum fermentum pellentesque quis ut massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas non adipiscing massa. Sed ut fringilla sapien. Cras sollicitudin, lectus sed tincidunt cursus, magna lectus vehicula augue, a lobortis dui orci et est.",
+    "conc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec massa enim. Aliquam viverra at est ullamcorper sollicitudin. Proin a leo sit amet nunc malesuada imperdiet pharetra ut eros.<br><br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec massa enim. Aliquam viverra at est ullamcorper sollicitudin. Proin a leo sit amet nunc malesuada imperdiet pharetra ut eros. <br><br>Mauris vel nunc at ipsum fermentum pellentesque quis ut massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas non adipiscing massa. Sed ut fringilla sapien. Cras sollicitudin, lectus sed tincidunt cursus, magna lectus vehicula augue, a lobortis dui orci et est.",
+    "_id": "578ba47c9d5e0c441a41ac71"
+  },
+  "conv_details": [
+    {
+      "name": "name",
+      "position": "position",
+      "contact_info": {
+        "conc_num": "8888888888",
+        "email": "example@gmail.com",
+        "_id": "578ba47c9d5e0c441a41ac70"
+      }
+    }
+  ]
+})
+
+db.clubs.save({
+  "_id": "club-2",
+  "about": {
+    "head": "Everything you see here is responsive and mobile-friendly.",
+    "mid_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec massa enim. Aliquam viverra at est ullamcorper sollicitudin. Proin a leo sit amet nunc malesuada imperdiet pharetra ut eros.<br><br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec massa enim. Aliquam viverra at est ullamcorper sollicitudin. Proin a leo sit amet nunc malesuada imperdiet pharetra ut eros. <br><br>Mauris vel nunc at ipsum fermentum pellentesque quis ut massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas non adipiscing massa. Sed ut fringilla sapien. Cras sollicitudin, lectus sed tincidunt cursus, magna lectus vehicula augue, a lobortis dui orci et est.",
+    "conc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec massa enim. Aliquam viverra at est ullamcorper sollicitudin. Proin a leo sit amet nunc malesuada imperdiet pharetra ut eros.<br><br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec massa enim. Aliquam viverra at est ullamcorper sollicitudin. Proin a leo sit amet nunc malesuada imperdiet pharetra ut eros. <br><br>Mauris vel nunc at ipsum fermentum pellentesque quis ut massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas non adipiscing massa. Sed ut fringilla sapien. Cras sollicitudin, lectus sed tincidunt cursus, magna lectus vehicula augue, a lobortis dui orci et est.",
+    "_id": "578ba47c9d5e0c441a41ac71"
+  },
+  "conv_details": [
+    {
+      "name": "name",
+      "position": "position",
+      "contact_info": {
+        "conc_num": "8888888888",
+        "email": "example@gmail.com",
+        "_id": "578ba47c9d5e0c441a41ac70"
+      }
+    }
+  ]
+})
+
+db.clubs.save({
+  "_id": "club-3",
+  "about": {
+    "head": "Everything you see here is responsive and mobile-friendly.",
+    "mid_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec massa enim. Aliquam viverra at est ullamcorper sollicitudin. Proin a leo sit amet nunc malesuada imperdiet pharetra ut eros.<br><br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec massa enim. Aliquam viverra at est ullamcorper sollicitudin. Proin a leo sit amet nunc malesuada imperdiet pharetra ut eros. <br><br>Mauris vel nunc at ipsum fermentum pellentesque quis ut massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas non adipiscing massa. Sed ut fringilla sapien. Cras sollicitudin, lectus sed tincidunt cursus, magna lectus vehicula augue, a lobortis dui orci et est.",
+    "conc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec massa enim. Aliquam viverra at est ullamcorper sollicitudin. Proin a leo sit amet nunc malesuada imperdiet pharetra ut eros.<br><br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec massa enim. Aliquam viverra at est ullamcorper sollicitudin. Proin a leo sit amet nunc malesuada imperdiet pharetra ut eros. <br><br>Mauris vel nunc at ipsum fermentum pellentesque quis ut massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas non adipiscing massa. Sed ut fringilla sapien. Cras sollicitudin, lectus sed tincidunt cursus, magna lectus vehicula augue, a lobortis dui orci et est.",
+    "_id": "578ba47c9d5e0c441a41ac71"
+  },
+  "conv_details": [
+    {
+      "name": "name",
+      "position": "position",
+      "contact_info": {
+        "conc_num": "8888888888",
+        "email": "example@gmail.com",
+        "_id": "578ba47c9d5e0c441a41ac70"
+      }
+    }
+  ]
+})
+
+
+
+
+
+
+

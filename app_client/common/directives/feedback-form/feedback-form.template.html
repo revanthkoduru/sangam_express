@@ -1,0 +1,55 @@
+<div class="container feedback-form" style="border-top:1px solid #ccc;">
+	<form id="addReview" name="addReview" role="form" ng-submit="fb.onSubmit()" class="form-horizontal">
+		<div class="section-header">
+				<!-- SECTION TITLE -->
+			<h2 class="dark-text">Feedback</h2>
+				<!-- SHORT DESCRIPTION ABOUT THE SECTION -->
+			<div class="dark-text section-legend">Use this section to give feedback.</div>		
+		</div>
+		<div class="form-group">
+			<label for="name" class="col-xs-12 col-sm-2 control-label">Name</label>
+			<div class="col-xs-12 col-sm-10">
+				<input id="name" name="name" ng-model="fb.formData.name"type="text" class="form-control"/>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="email" class="col-xs-12 col-sm-2 control-label">Email-id</label>
+			<div class="col-xs-12 col-sm-10">
+				<input id="email" name="email" ng-model="fb.formData.email" type="email"class="form-control"/>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="club" class="col-xs-12 col-sm-2 control-label">Club</label>
+			<div class="col-xs-12 col-sm-10">
+				<input id="club" name="club" ng-model="fb.formData.club" required="required" type="text" class="form-control"/>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="event" class="col-xs-12 col-sm-2 control-label">Event</label>
+			<div class="col-xs-12 col-sm-10">
+				<input id="event" name="event" ng-model="fb.formData.event" class="form-control"/>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="rating" class="col-xs-12 col-sm-2 control-label">Rating</label>
+			<div class="col-xs-12 col-sm-2">
+				<select id="rating" name="rating" ng-model="fb.formData.rating" required="required"class="form-control input-sm">
+					<option>5</option>
+					<option>4</option>
+					<option>3</option>
+					<option>2</option>
+					<option>1</option>
+				</select>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="review" class="col-sm-2 control-label">Review</label>
+			<div class="col-sm-10">
+				<textarea id="review" name="review" ng-model="fb.formData.review" required="required" rows="5"  class="form-control"></textarea>
+			</div>
+		</div>
+		<div class="col-xs-offset-4 col-sm-offset-6">
+			<button type="submit" class="btn btn-primary">Submit Review</button>
+		</div>
+	</form>
+</div>
